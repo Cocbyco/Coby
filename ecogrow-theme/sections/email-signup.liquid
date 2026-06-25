@@ -1,0 +1,30 @@
+<section class="newsletter-section">
+  <div class="container">
+    <h2>{{ section.settings.heading | default: 'Grow With Us 🌱' }}</h2>
+    <p>{{ section.settings.subtext | default: 'Get 10% off your first order + weekly gardening tips, new product alerts, and exclusive deals.' }}</p>
+    {% form 'customer' %}
+      {{ form.errors | default_errors }}
+      {% if form.posted_successfully? %}
+        <p style="color: #fff; font-weight: 600;">Thanks for subscribing! 🌱</p>
+      {% else %}
+        <div class="newsletter-form">
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <input type="email" name="contact[email]" placeholder="Enter your email" required aria-label="Email">
+          <button type="submit" class="button button--primary">Sign Up</button>
+        </div>
+        <p class="newsletter-disclaimer">No spam. Just green goodness. Unsubscribe anytime.</p>
+      {% endif %}
+    {% endform %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Email signup",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Grow With Us 🌱" },
+    { "type": "textarea", "id": "subtext", "label": "Subtext" }
+  ],
+  "presets": [ { "name": "Email signup" } ]
+}
+{% endschema %}

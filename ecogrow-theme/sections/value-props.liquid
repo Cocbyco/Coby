@@ -1,0 +1,34 @@
+<section class="value-props">
+  <div class="value-props__grid">
+    <div class="value-prop">
+      <div class="value-prop__icon">🌿</div>
+      <h3 class="value-prop__title">{{ section.settings.pillar_1_title | default: 'Planet-First Materials' }}</h3>
+      <p class="value-prop__text">{{ section.settings.pillar_1_text | default: 'Every product we stock is chosen for its eco-friendly footprint — bamboo, biodegradable materials, and plastic-free alternatives.' }}</p>
+    </div>
+    <div class="value-prop">
+      <div class="value-prop__icon">🌱</div>
+      <h3 class="value-prop__title">{{ section.settings.pillar_2_title | default: 'Smarter Ways to Grow' }}</h3>
+      <p class="value-prop__text">{{ section.settings.pillar_2_text | default: 'From heart-shaped fruit molds to solar-powered garden tech, we find the tools that make gardening more creative, more efficient, and more fun.' }}</p>
+    </div>
+    <div class="value-prop">
+      <div class="value-prop__icon">📦</div>
+      <h3 class="value-prop__title">{{ section.settings.pillar_3_title | default: 'Carbon-Conscious Delivery' }}</h3>
+      <p class="value-prop__text">{{ section.settings.pillar_3_text | default: 'We optimize every shipment for minimal waste — plastic-free packaging, carbon-offset shipping partners, and no unnecessary over-boxing.' }}</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Value propositions",
+  "settings": [
+    { "type": "text", "id": "pillar_1_title", "label": "Pillar 1 title", "default": "Planet-First Materials" },
+    { "type": "textarea", "id": "pillar_1_text", "label": "Pillar 1 text" },
+    { "type": "text", "id": "pillar_2_title", "label": "Pillar 2 title", "default": "Smarter Ways to Grow" },
+    { "type": "textarea", "id": "pillar_2_text", "label": "Pillar 2 text" },
+    { "type": "text", "id": "pillar_3_title", "label": "Pillar 3 title", "default": "Carbon-Conscious Delivery" },
+    { "type": "textarea", "id": "pillar_3_text", "label": "Pillar 3 text" }
+  ],
+  "presets": [ { "name": "Value propositions" } ]
+}
+{% endschema %}

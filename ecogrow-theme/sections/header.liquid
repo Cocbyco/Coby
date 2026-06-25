@@ -1,0 +1,52 @@
+<header class="header">
+  <div class="header__inner">
+    <a href="/" class="header__logo">
+      {% if section.settings.logo != blank %}
+        <img src="{{ section.settings.logo | img_url: '120x' }}" alt="{{ shop.name }}" width="120" height="auto" loading="eager">
+      {% else %}
+        🌿 EcoGrow Co.
+      {% endif %}
+    </a>
+
+    <nav class="header__nav" role="navigation">
+      <a href="/collections/all">{{ 'layout.menu.shop' | t }}</a>
+      <a href="/pages/about">{{ 'layout.menu.about' | t }}</a>
+      <a href="/pages/faq">{{ 'layout.menu.faq' | t }}</a>
+      <a href="/pages/contact">{{ 'layout.menu.contact' | t }}</a>
+    </nav>
+
+    <div class="header__icons">
+      <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span class="header__icon">☰</span>
+      </button>
+      <a href="/cart" class="header__icon" aria-label="Cart">
+        🛒
+        <span class="visually-hidden">Cart</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo text fallback",
+      "default": "EcoGrow Co."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header"
+    }
+  ]
+}
+{% endschema %}

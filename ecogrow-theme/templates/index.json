@@ -1,0 +1,39 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-banner",
+      "settings": {
+        "title": "Grow Greener.",
+        "subtitle": "Every Plant, Every Choice, Every Day.",
+        "text": "Thoughtful gardening tools and eco-friendly essentials — designed for modern growers who care about their garden and the planet.",
+        "button_text": "Shop All Products",
+        "button_url": "/collections/all",
+        "button_text_2": "Our Story",
+        "button_url_2": "/pages/about"
+      }
+    },
+    "featured-products": {
+      "type": "featured-products-grid",
+      "settings": {
+        "heading": "Our Top Picks for This Season",
+        "subtext": "Hand-picked essentials to elevate your growing space — from seed to harvest."
+      },
+      "blocks": [
+        { "type": "product", "settings": { "title": "Heart-Shaped Fruit Molds — 4-Pack", "price": "$14.99", "url": "/products/heart-shaped-fruit-molds", "emoji": "🍓" } },
+        { "type": "product", "settings": { "title": "Biodegradable Nursery Bags — 100-Pack", "price": "$12.99", "url": "/products/biodegradable-nursery-bags", "emoji": "🌱" } },
+        { "type": "product", "settings": { "title": "Desktop Hydroponics Station", "price": "$19.99", "url": "/products/desktop-hydroponics-station", "emoji": "🪴" } },
+        { "type": "product", "settings": { "title": "Stainless Steel Hollow Hoe", "price": "$19.99", "url": "/products/stainless-steel-hollow-hoe", "emoji": "🛠️" } },
+        { "type": "product", "settings": { "title": "Solar Powered Pond Fountain", "price": "$34.99", "url": "/products/solar-powered-pond-fountain", "emoji": "☀️" } }
+      ]
+    },
+    "value-props": {
+      "type": "value-props",
+      "settings": {}
+    },
+    "email-signup": {
+      "type": "email-signup",
+      "settings": {}
+    }
+  },
+  "order": ["hero", "featured-products", "value-props", "email-signup"]
+}

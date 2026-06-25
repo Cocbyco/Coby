@@ -1,0 +1,139 @@
+[
+  {
+    "name": "Theme settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Colors"
+      },
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary (Deep Forest Green)",
+        "default": "#1B4332"
+      },
+      {
+        "type": "color",
+        "id": "secondary_color",
+        "label": "Secondary (Sage Green)",
+        "default": "#95B46A"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background (Warm Neutral)",
+        "default": "#F5F0EB"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent (Terracotta)",
+        "default": "#C26A4A"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Body Text (Slate Brown)",
+        "default": "#6B5E4A"
+      },
+      {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading Text",
+        "default": "#1B4332"
+      },
+      {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "sale_color",
+        "label": "Sale / Price Color",
+        "default": "#C26A4A"
+      },
+      {
+        "type": "header",
+        "content": "Typography"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading font",
+        "default": "playfair_display_n6"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "Body font",
+        "default": "inter_n4"
+      },
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "select",
+        "id": "page_width",
+        "label": "Page width",
+        "default": "1200",
+        "options": [
+          { "value": "1000", "label": "1000px" },
+          { "value": "1200", "label": "1200px" },
+          { "value": "1400", "label": "1400px" },
+          { "value": "1600", "label": "1600px" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Footer"
+      },
+      {
+        "type": "text",
+        "id": "footer_text",
+        "label": "Footer copyright text",
+        "default": "© 2026 EcoGrow Co. All rights reserved. 🌱"
+      },
+      {
+        "type": "header",
+        "content": "Social Media"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_url",
+        "label": "Instagram URL",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_url",
+        "label": "Pinterest URL",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok_url",
+        "label": "TikTok URL",
+        "default": "#"
+      },
+      {
+        "type": "header",
+        "content": "Email Signup"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_heading",
+        "label": "Newsletter heading",
+        "default": "Grow With Us 🌱"
+      },
+      {
+        "type": "textarea",
+        "id": "newsletter_subtext",
+        "label": "Newsletter subtext",
+        "default": "Get 10% off your first order + weekly gardening tips, new product alerts, and exclusive deals."
+      }
+    ]
+  }
+]

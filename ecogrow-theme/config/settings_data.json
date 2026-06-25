@@ -1,0 +1,21 @@
+{
+  "current": {
+    "primary_color": "#1B4332",
+    "secondary_color": "#95B46A",
+    "background_color": "#F5F0EB",
+    "accent_color": "#C26A4A",
+    "text_color": "#6B5E4A",
+    "heading_color": "#1B4332",
+    "button_text_color": "#FFFFFF",
+    "sale_color": "#C26A4A",
+    "heading_font": "playfair_display_n6",
+    "body_font": "inter_n4",
+    "page_width": "1200",
+    "footer_text": "© 2026 EcoGrow Co. All rights reserved. 🌱",
+    "social_instagram_url": "https://instagram.com/EcoGrowCo",
+    "social_pinterest_url": "https://pinterest.com/EcoGrowCo",
+    "social_tiktok_url": "https://tiktok.com/@EcoGrowCo",
+    "newsletter_heading": "Grow With Us 🌱",
+    "newsletter_subtext": "Get 10% off your first order + weekly gardening tips, new product alerts, and exclusive deals."
+  }
+}
