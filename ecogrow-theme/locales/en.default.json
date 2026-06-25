@@ -1,0 +1,72 @@
+{
+  "en": {
+    "general": {
+      "store_name": "EcoGrow Co.",
+      "tagline": "Grow Greener"
+    },
+    "layout": {
+      "menu": {
+        "home": "Home",
+        "shop": "Shop All",
+        "about": "About Us",
+        "faq": "FAQ",
+        "contact": "Contact"
+      }
+    },
+    "homepage": {
+      "hero_heading": "Grow Greener.",
+      "hero_subheading": "Every Plant, Every Choice, Every Day.",
+      "hero_text": "Thoughtful gardening tools and eco-friendly essentials — designed for modern growers who care about their garden and the planet.",
+      "hero_cta": "Shop All Products",
+      "hero_cta_secondary": "Our Story",
+      "featured_heading": "Our Top Picks for This Season",
+      "featured_subtext": "Hand-picked essentials to elevate your growing space — from seed to harvest.",
+      "pillar_1_title": "Planet-First Materials",
+      "pillar_1_text": "Every product we stock is chosen for its eco-friendly footprint — bamboo, biodegradable materials, and plastic-free alternatives.",
+      "pillar_2_title": "Smarter Ways to Grow",
+      "pillar_2_text": "From heart-shaped fruit molds to solar-powered garden tech, we find the tools that make gardening more creative, more efficient, and more fun.",
+      "pillar_3_title": "Carbon-Conscious Delivery",
+      "pillar_3_text": "We optimize every shipment for minimal waste — plastic-free packaging, carbon-offset shipping partners, and no unnecessary over-boxing."
+    },
+    "about": {
+      "heading": "Our Roots Run Deep.",
+      "mission": "Make sustainable gardening accessible, affordable, and utterly delightful.",
+      "values": "Eco-Friendly Materials, Real Utility, Longevity, Fair Value"
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions"
+    },
+    "contact": {
+      "heading": "Let's Grow Together.",
+      "subheading": "Have a question, suggestion, or just want to say hi? We'd love to hear from you.",
+      "email": "hello@ecogrowco.com"
+    },
+    "products": {
+      "product_1_title": "Heart-Shaped Fruit Molds — 4-Pack",
+      "product_1_price": "$14.99",
+      "product_1_description": "Turn ordinary fruits and vegetables into adorable heart shapes! These reusable silicone molds create the ultimate conversation piece for salads, gifts, and social media.",
+      "product_2_title": "Biodegradable Nursery Bags — 100-Pack",
+      "product_2_price": "$12.99",
+      "product_2_description": "Start your seeds the sustainable way. These 100% biodegradable nursery bags eliminate plastic waste and transplant shock — plant the whole bag directly in the ground.",
+      "product_3_title": "Desktop Hydroponics Station",
+      "product_3_price": "$19.99",
+      "product_3_description": "Propagate your favorite plants in style. This elegant desktop propagation station lets you root cuttings in water while creating a stunning indoor display.",
+      "product_4_title": "Stainless Steel Hollow Hoe",
+      "product_4_price": "$19.99",
+      "product_4_description": "Weed smarter, not harder. The hollow hoe's innovative angled design cuts weeds at the root with one effortless motion — no bending, no strain.",
+      "product_5_title": "Solar Powered Pond Fountain",
+      "product_5_price": "$34.99",
+      "product_5_description": "Transform any pond, birdbath, or water feature into a stunning solar-powered fountain. No wiring, no electricity costs — just the sun."
+    },
+    "newsletter": {
+      "placeholder": "Enter your email",
+      "button": "Sign Up",
+      "disclaimer": "No spam. Just green goodness. Unsubscribe anytime."
+    },
+    "footer": {
+      "quick_links": "Quick Links",
+      "policies": "Policies",
+      "social": "Follow Us"
+    }
+  }
+}

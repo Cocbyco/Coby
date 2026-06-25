@@ -1,0 +1,53 @@
+<section class="newsletter-section">
+  <div class="container">
+    <h2>{{ section.settings.heading | default: shop.name }}</h2>
+    <p>{{ section.settings.subtext }}</p>
+
+    {% form 'customer' %}
+      {{ form.errors | default_errors }}
+      {% if form.posted_successfully? %}
+        <p>Thanks for subscribing! 🌱</p>
+      {% else %}
+        <div class="newsletter-form">
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <input
+            type="email"
+            name="contact[email]"
+            placeholder="{{ 'newsletter.placeholder' | t }}"
+            required
+            aria-label="Email"
+          >
+          <button type="submit" class="button button--primary">
+            {{ 'newsletter.button' | t }}
+          </button>
+        </div>
+        <p class="newsletter-disclaimer">{{ 'newsletter.disclaimer' | t }}</p>
+      {% endif %}
+    {% endform %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Grow With Us 🌱"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Get 10% off your first order + weekly gardening tips, new product alerts, and exclusive deals."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter"
+    }
+  ]
+}
+{% endschema %}

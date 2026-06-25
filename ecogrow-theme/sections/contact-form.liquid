@@ -1,0 +1,63 @@
+<div class="contact-page">
+  <h1>Let's Grow Together.</h1>
+  <p style="font-size: 1.1rem; max-width: 500px; margin: 0 auto var(--spacing-md);">
+    Have a question, suggestion, or just want to say hi? We'd love to hear from you.
+  </p>
+
+  {% form 'contact' %}
+    {% if form.posted_successfully? %}
+      <p style="color: var(--color-primary); font-weight: 600;">Thanks for reaching out! We'll get back to you within 24 hours. 🌱</p>
+    {% endif %}
+
+    {{ form.errors | default_errors }}
+
+    <div class="contact-form">
+      <div class="form-group">
+        <label for="ContactFormName">Name</label>
+        <input type="text" id="ContactFormName" name="contact[name]" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ContactFormEmail">Email</label>
+        <input type="email" id="ContactFormEmail" name="contact[email]" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ContactFormOrder">Order Number (optional)</label>
+        <input type="text" id="ContactFormOrder" name="contact[order_number]">
+      </div>
+
+      <div class="form-group">
+        <label for="ContactFormSubject">Subject</label>
+        <select id="ContactFormSubject" name="contact[subject]">
+          <option value="Order Question">Order Question</option>
+          <option value="Product Question">Product Question</option>
+          <option value="Shipping Question">Shipping Question</option>
+          <option value="Returns">Returns</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="ContactFormMessage">Message</label>
+        <textarea id="ContactFormMessage" name="contact[body]" required></textarea>
+      </div>
+
+      <button type="submit" class="button button--primary" style="width: 100%;">Send Message</button>
+    </div>
+  {% endform %}
+
+  <p style="margin-top: var(--spacing-lg);">
+    📧 <strong>Email:</strong> hello@ecogrowco.com<br>
+    📱 <strong>Social:</strong> @EcoGrowCo on Instagram, TikTok, Pinterest
+  </p>
+</div>
+
+{% schema %}
+{
+  "name": "Contact form",
+  "settings": [],
+  "presets": [ { "name": "Contact form" } ]
+}
+{% endschema %}

@@ -1,0 +1,44 @@
+<div class="product-page">
+  <div class="product-page__grid">
+    <div class="product-page__images">
+      {% if product.featured_image != blank %}
+        <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}" width="800" height="800" loading="eager">
+      {% else %}
+        🌿
+      {% endif %}
+    </div>
+    <div class="product-page__info">
+      <h1 class="product-page__title">{{ product.title }}</h1>
+      <div class="product-page__price">{{ product.price | money }}</div>
+
+      {% if product.compare_at_price > product.price %}
+        <div class="product-page__price" style="text-decoration: line-through; color: var(--color-text); font-size: 1rem;">
+          {{ product.compare_at_price | money }}
+        </div>
+      {% endif %}
+
+      <div class="product-page__description">
+        {{ product.description }}
+      </div>
+
+      {% form 'product', product %}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        <button type="submit" name="add" class="button button--primary product-page__add-to-cart">
+          {% if product.available %}
+            Add to Cart — {{ product.price | money }}
+          {% else %}
+            Sold Out
+          {% endif %}
+        </button>
+      {% endform %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product template",
+  "settings": [],
+  "presets": [ { "name": "Product template" } ]
+}
+{% endschema %}

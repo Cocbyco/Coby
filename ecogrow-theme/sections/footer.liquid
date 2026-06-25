@@ -1,0 +1,58 @@
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__column">
+      <h4>{{ 'footer.quick_links' | t }}</h4>
+      <ul>
+        <li><a href="/collections/all">{{ 'layout.menu.shop' | t }}</a></li>
+        <li><a href="/pages/about">{{ 'layout.menu.about' | t }}</a></li>
+        <li><a href="/pages/faq">{{ 'layout.menu.faq' | t }}</a></li>
+        <li><a href="/pages/contact">{{ 'layout.menu.contact' | t }}</a></li>
+      </ul>
+    </div>
+    <div class="footer__column">
+      <h4>{{ 'footer.policies' | t }}</h4>
+      <ul>
+        <li><a href="/policies/refund-policy">Refund Policy</a></li>
+        <li><a href="/policies/shipping-policy">Shipping Policy</a></li>
+        <li><a href="/policies/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/policies/terms-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="footer__column">
+      <h4>{{ 'footer.social' | t }}</h4>
+      <ul>
+        {% if settings.social_instagram_url != blank %}
+          <li><a href="{{ settings.social_instagram_url }}" target="_blank">Instagram</a></li>
+        {% endif %}
+        {% if settings.social_pinterest_url != blank %}
+          <li><a href="{{ settings.social_pinterest_url }}" target="_blank">Pinterest</a></li>
+        {% endif %}
+        {% if settings.social_tiktok_url != blank %}
+          <li><a href="{{ settings.social_tiktok_url }}" target="_blank">TikTok</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="footer__column">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:{{ 'contact.email' | t }}">{{ 'contact.email' | t }}</a></li>
+        <li><a href="/pages/contact">Send a Message</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    {{ settings.footer_text }}
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Footer"
+    }
+  ]
+}
+{% endschema %}

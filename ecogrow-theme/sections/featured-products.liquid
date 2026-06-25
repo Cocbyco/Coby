@@ -1,0 +1,108 @@
+<section class="featured-products">
+  <div class="featured-products__header">
+    <h2>{{ section.settings.heading | default: 'Our Top Picks for This Season' }}</h2>
+    {% if section.settings.subtext != blank %}
+      <p>{{ section.settings.subtext }}</p>
+    {% endif %}
+  </div>
+
+  <div class="featured-products__grid">
+    {% for block in section.blocks %}
+      <div class="product-card">
+        <div class="product-card__image">
+          {% if block.settings.product != blank %}
+            {% assign product = block.settings.product %}
+            {% if product.featured_image != blank %}
+              <img src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}" loading="lazy" width="400" height="400">
+            {% else %}
+              🌿
+            {% endif %}
+          {% else %}
+            {{ block.settings.emoji | default: '🌿' }}
+          {% endif %}
+        </div>
+        <div class="product-card__info">
+          <h3 class="product-card__title">
+            {% if block.settings.product != blank %}
+              {{ product.title }}
+            {% else %}
+              {{ block.settings.title }}
+            {% endif %}
+          </h3>
+          <div class="product-card__price">
+            {% if block.settings.product != blank %}
+              {{ product.price | money }}
+            {% else %}
+              {{ block.settings.price }}
+            {% endif %}
+          </div>
+          <a href="{% if block.settings.product != blank %}{{ product.url }}{% else %}#{% endif %}" class="button button--primary product-card__button">
+            Quick Shop
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Top Picks for This Season"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Hand-picked essentials to elevate your growing space — from seed to harvest."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Fallback title"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Fallback price"
+        },
+        {
+          "type": "text",
+          "id": "emoji",
+          "label": "Fallback icon",
+          "default": "🌿"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Featured products",
+      "blocks": [
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" },
+        { "type": "product" }
+      ]
+    }
+  ]
+}
+{% endschema %}

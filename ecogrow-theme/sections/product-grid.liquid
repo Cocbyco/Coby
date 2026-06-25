@@ -1,0 +1,31 @@
+<div class="featured-products__grid" style="max-width: var(--page-width); margin: 0 auto; padding: 0 var(--spacing-sm);">
+  {% for product in collection.products %}
+    <div class="product-card">
+      <a href="{{ product.url }}">
+        <div class="product-card__image">
+          {% if product.featured_image != blank %}
+            <img src="{{ product.featured_image | img_url: '400x' }}" alt="{{ product.title }}" loading="lazy">
+          {% else %}
+            🌿
+          {% endif %}
+        </div>
+        <div class="product-card__info">
+          <h3 class="product-card__title">{{ product.title }}</h3>
+          <div class="product-card__price">{{ product.price | money }}</div>
+        </div>
+      </a>
+    </div>
+  {% else %}
+    <p style="text-align: center; grid-column: 1 / -1; padding: var(--spacing-lg);">
+      No products found in this collection. Check back soon!
+    </p>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Product grid",
+  "settings": [],
+  "presets": [ { "name": "Product grid" } ]
+}
+{% endschema %}
