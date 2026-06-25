@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "blog-header": {
+      "type": "rich-text",
+      "settings": {
+        "heading": "EcoGrow Co. Blog",
+        "text": "Gardening tips, product guides, and sustainable living inspiration."
+      }
+    }
+  },
+  "order": ["blog-header"]
+}
